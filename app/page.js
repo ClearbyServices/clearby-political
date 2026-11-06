@@ -25,7 +25,7 @@ export default function Home() {
           <div className="wrap hero-grid">
             <div>
               <span className="hero-tag">Political Digital Marketing Agency in India</span>
-              <h1>Political Digital Marketing &amp; Campaign Services in India</h1>
+              <h1>Political Campaign Services in India</h1>
               <p className="hero-subtitle">Build a Stronger Political Presence. Online and Offline.</p>
               <p className="lead">Clearby Political helps leaders, candidates, and parties communicate with voters through digital strategy, social media management, campaign websites, video production, advertising, and print, all managed under one roof by a single team.</p>
               <div className="hero-actions">

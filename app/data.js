@@ -15,100 +15,164 @@ export const NAV = [
 
 export const SERVICES = [
   [
-    '1. Political Digital Marketing & Campaign Strategy',
-    'A well-planned digital campaign helps maintain consistency across online communication channels. We develop digital marketing plans based on campaign objectives, communication priorities, timelines, and platform requirements.',
+    '1. Political Campaign Management & Strategy',
+    'A successful political campaign requires structured planning, consistent communication, and coordinated execution. Clearby Political provides campaign management and strategic planning services to help political leaders, candidates, and organisations manage their campaign activities effectively.',
     [
-      'Digital campaign planning and communication strategy.',
-      'Online presence and platform assessment.',
-      'Campaign content planning and scheduling.',
-      'Digital campaign coordination.',
-      'Search visibility and online presence optimisation.',
-      'Campaign performance monitoring and reporting.'
+      'Electoral campaign planning and coordination.',
+      'Campaign narrative and communication planning.',
+      'Campaign strategy development.',
+      'Campaign activity scheduling.',
+      'Online and offline campaign coordination.',
+      'Campaign progress monitoring and reporting.'
     ]
   ],
   [
-    '2. Political Social Media Marketing & Management',
-    'Social media has become an important communication channel for political leaders and organisations. It provides a platform to share public updates, announcements, initiatives, event information, speeches, and other relevant communication.',
+    '2. Image Building & Public Relations',
+    'A professional public image requires consistent communication, strong visual identity, and meaningful public engagement. We help political leaders and organisations develop a recognisable public presence through branding, media communication, and public relations services.',
     [
-      'Social media strategy and account management.',
-      'Monthly content calendars.',
-      'Political social media post design.',
-      'Short-form videos, reels, and campaign creatives.',
-      'Event updates and announcement graphics.',
-      'Speech highlights and interview clips.',
-      'Community management and response coordination.',
-      'Performance tracking and reporting.'
+      'Candidate image building.',
+      'Personal and political branding.',
+      'Public relations planning.',
+      'Media communication and coordination.',
+      'Press releases and media materials.',
+      'Profile development and presentation.',
+      'Publicity and promotional creatives.',
+      'Digital and offline brand consistency.'
     ]
   ],
   [
-    '3. Political Branding & Candidate Image Building',
-    'A consistent visual identity helps people recognise a political leader or organisation across different communication channels. Candidate branding should be professional, distinctive, and consistent across digital and offline platforms.',
+    '3. Social Media War Room',
+    'Managing multiple social media platforms requires continuous coordination, content planning, and organised communication. Our Social Media War Room provides a centralised approach to monitoring media activities, coordinating content, and managing digital communication.',
     [
-      'Candidate logo and visual identity design.',
-      'Campaign theme and creative direction.',
-      'Profile and introduction designs.',
-      'Social media branding templates.',
-      'Campaign posters and banners.',
-      'Brochure and leaflet design.',
-      'Outdoor advertising creatives.',
-      'Consistent branding across digital and print materials.'
+      'Social media account management.',
+      'Social media activity monitoring.',
+      'Content calendars and publishing schedules.',
+      'Political post and creative design.',
+      'Reels and short-form video coordination.',
+      'Campaign announcement graphics.',
+      'Media monitoring and reporting.',
+      'Content planning and brainstorming.',
+      'Digital communication coordination.'
     ]
   ],
   [
-    '4. Political Website Design & Development',
-    'A professional website provides a central place for political leaders and organisations to publish verified information, share updates, introduce their work, and provide contact details.',
+    '4. Political Survey & Public Opinion Research',
+    'Understanding public opinion is an important part of planning and evaluating public communication initiatives. We provide survey-related services to help organisations collect, organise, and understand feedback through structured research methods.',
     [
-      'Candidate profile and introduction pages.',
-      'Political party and organisation websites.',
-      'Work, achievements, and initiative sections.',
-      'Policy and manifesto information pages.',
-      'News, announcements, and campaign updates.',
-      'Photo and video galleries.',
-      'Event information and schedules.',
-      'Contact and enquiry forms.',
-      'Volunteer information and registration forms.',
-      'Search engine optimisation and website maintenance.'
+      'Questionnaire development.',
+      'Public opinion survey planning.',
+      'Survey form development.',
+      'Survey data collection coordination.',
+      'Digital and telephone survey solutions.',
+      'Response organisation and reporting.',
+      'Survey data presentation.'
     ]
   ],
   [
-    '5. Political Advertising & Performance Marketing',
-    'Digital advertising can support the distribution of approved campaign information and help organisations reach relevant audiences through permitted advertising channels.',
+    '5. Booth Management & Field Coordination',
+    'Field coordination requires organised communication, structured information management, and clear coordination between authorised campaign teams. We provide operational support and coordination solutions for campaign-related field activities.',
     [
-      'Meta advertising campaign management.',
-      'Google Ads planning and management.',
-      'YouTube video advertising.',
-      'Campaign landing page development.',
-      'Advertising creative and copy development.',
-      'Campaign budget planning.',
-      'Performance monitoring and reporting.'
+      'Booth-level operational coordination.',
+      'Field team management support.',
+      'Campaign activity scheduling.',
+      'Team communication coordination.',
+      'Field activity reporting.',
+      'Operational information management.',
+      'Coordination support for authorised representatives.'
     ]
   ],
   [
-    '6. Political Video Production & Content Creation',
-    'Video is an effective format for presenting speeches, public events, interviews, announcements, and campaign-related information. Professionally produced videos can also be adapted into shorter formats for different digital platforms.',
+    '6. Election Management Software & Digital Solutions',
+    'Digital management systems can help organisations maintain structured information, coordinate administrative activities, and manage authorised operational workflows. We provide software and technology solutions designed around organisational requirements.',
     [
-      'Candidate introduction videos.',
-      'Campaign profile films.',
-      'Speech and interview recording.',
-      'Public event photography and videography.',
-      'Campaign reels and short-form videos.',
-      'Promotional video editing.',
-      'Motion graphics and animated creatives.',
-      'Video thumbnails and social media creatives.',
-      'Content adaptation for multiple platforms.'
+      'Election management software.',
+      'Digital information management systems.',
+      'Administrative workflow solutions.',
+      'Organisational data management.',
+      'Software configuration and implementation.',
+      'Virtual and digital management solutions.',
+      'Technical support and maintenance.'
     ]
   ],
   [
-    '7. Political Printing & Campaign Promotional Materials',
-    'Digital communication can be supported by professionally designed offline promotional materials. Consistent branding across print and digital formats helps maintain a unified campaign identity.',
+    '7. Photography & Videography',
+    'Professional photography and videography help document events, communicate information, and create high-quality visual content. Our production services cover different formats, from event documentation to professionally edited video content.',
     [
-      'Political campaign banners and flex printing.',
-      'Posters, pamphlets, and leaflets.',
-      'Brochures and candidate profiles.',
+      'Professional photography.',
+      'Event photography and coverage.',
+      'Campaign-related videography.',
+      'Cinematography.',
+      'Chroma key video production.',
+      'Interview and speech recording.',
+      'Video editing and post-production.',
+      'Promotional video creation.',
+      'Motion graphics and visual content.'
+    ]
+  ],
+  [
+    '8. E-Campaign & Digital Communication',
+    'Digital communication provides convenient ways to distribute approved announcements, updates, and information through different communication channels. We offer integrated e-campaign communication solutions based on organisational requirements and applicable consent regulations.',
+    [
+      'SMS communication services.',
+      'Voice call communication.',
+      'WhatsApp Business messaging.',
+      'Bulk message coordination.',
+      'Approved announcement distribution.',
+      'Communication scheduling.',
+      'Delivery monitoring and reporting.'
+    ]
+  ],
+  [
+    '9. AI-Based Campaign Technology',
+    'Artificial intelligence and automation technologies can support content production and communication workflows. We provide technology-assisted solutions to help organisations create and manage different types of digital communication.',
+    [
+      'AI-assisted video production.',
+      'AI voice generation solutions.',
+      'Automated survey call systems.',
+      'Voice-based communication solutions.',
+      'AI-supported content production.',
+      'Technology-assisted communication workflows.',
+      'Automated reporting and process support.'
+    ]
+  ],
+  [
+    '10. Voter Slip Printer Solutions',
+    'Printing equipment provides convenient access to paper-based information and documentation. We offer voter slip printing solutions designed for authorised administrative and informational requirements.',
+    [
+      'Portable voter slip printer solutions.',
+      'Instant paper slip printing.',
+      'Printer setup and configuration.',
+      'Printing equipment support.',
+      'On-demand document printing.',
+      'Hardware and operational assistance.'
+    ]
+  ],
+  [
+    '11. LED Van & Mobile Digital Advertising',
+    'Mobile LED display vehicles provide a flexible medium for displaying approved audiovisual content at permitted locations. We provide LED van solutions for outdoor digital display and event-based communication.',
+    [
+      'Hydraulic LED screen vans.',
+      'Non-hydraulic LED screen vans.',
+      'Mobile digital display solutions.',
+      'LED screen advertising coordination.',
+      'Video and graphic display preparation.',
+      'Mobile screen presentation support.',
+      'Event-based LED display services.'
+    ]
+  ],
+  [
+    '12. Printing & Campaign Materials',
+    'Printed communication materials remain useful for presenting information in physical formats. We provide design and printing solutions for organisational documents, promotional materials, and approved public communication.',
+    [
+      'Vision document design and printing.',
+      'Manifesto design and printing.',
+      'Inland letter printing.',
+      'Political campaign brochures.',
+      'Posters and pamphlets.',
+      'Banners and flex printing.',
       'Visiting cards and stationery.',
-      'Hoardings and outdoor advertising creatives.',
-      'Event backdrops and standees.',
-      'Campaign merchandise and promotional materials.'
+      'Outdoor promotional materials.',
+      'Custom printing solutions.'
     ]
   ]
 ];
