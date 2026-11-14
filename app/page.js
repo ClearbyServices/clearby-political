@@ -7,12 +7,59 @@ import Footer from '../components/Footer';
 import ModalForm from '../components/ModalForm';
 import FaqAccordion from '../components/FaqAccordion';
 import BackToTop from '../components/BackToTop';
+import { ClientTestimonials } from '../components/ClientTestimonials';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
   
   const showModal = () => setOpen(true);
   const hideModal = () => setOpen(false);
+
+  const clientReviews = [
+    {
+      quote: "Clearby Political streamlined our entire digital presence, ensuring consistent branding across our website and social media channels.",
+      name: "Adv. Rajesh Patil",
+      role: "Candidate, State Legislative Assembly",
+      src: "/lightmode-logo cl.png",
+    },
+    {
+      quote: "The team managed our daily content schedules and promotional materials seamlessly throughout the campaign window.",
+      name: "Suresh Deshmukh",
+      role: "Campaign Coordinator",
+      src: "/lightmode-logo cl.png",
+    },
+    {
+      quote: "From candidate branding to targeted digital advertising, their integrated approach gave us a massive edge on ground communication.",
+      name: "Vikram Jadhav",
+      role: "Party Unit President",
+      src: "/lightmode-logo cl.png",
+    },
+  ];
+
+  // NEW: 20+ Political Client Roster for Animated Marquee
+  const leadersList = [
+    { name: "Rahul Deshmukh", role: "Member of Legislative Assembly", img: "/lightmode-logo cl.png" },
+    { name: "Priya Sharma", role: "Zila Parishad Member", img: "/lightmode-logo cl.png" },
+    { name: "Vikram Jadhav", role: "Party Unit President", img: "/lightmode-logo cl.png" },
+    { name: "Sanjay Patil", role: "Member of Parliament", img: "/lightmode-logo cl.png" },
+    { name: "Anita Chavan", role: "Mayor", img: "/lightmode-logo cl.png" },
+    { name: "Ramesh Pawar", role: "Corporator", img: "/lightmode-logo cl.png" },
+    { name: "Suresh Deshmukh", role: "Campaign Coordinator", img: "/lightmode-logo cl.png" },
+    { name: "Adv. Rajesh Patil", role: "Candidate, State Assembly", img: "/lightmode-logo cl.png" },
+    { name: "Kiran Gokhale", role: "District President", img: "/lightmode-logo cl.png" },
+    { name: "Nitin Kadam", role: "City Vice President", img: "/lightmode-logo cl.png" },
+    { name: "Meena Thorat", role: "Panchayat Samiti Member", img: "/lightmode-logo cl.png" },
+    { name: "Vijay Shinde", role: "Youth Wing Leader", img: "/lightmode-logo cl.png" },
+    { name: "Sunil Munde", role: "Former MLA", img: "/lightmode-logo cl.png" },
+    { name: "Deepak Joshi", role: "State Secretary", img: "/lightmode-logo cl.png" },
+    { name: "Arun Kulkarni", role: "Spokesperson", img: "/lightmode-logo cl.png" },
+    { name: "Pooja Wagh", role: "Women's Wing President", img: "/lightmode-logo cl.png" },
+    { name: "Mahesh Bhosale", role: "Taluka President", img: "/lightmode-logo cl.png" },
+    { name: "Ganesh Kale", role: "Sarpanch", img: "/lightmode-logo cl.png" },
+    { name: "Santosh Mane", role: "Candidate, Lok Sabha", img: "/lightmode-logo cl.png" },
+    { name: "Amol Jadhav", role: "General Secretary", img: "/lightmode-logo cl.png" },
+    { name: "Sneha Desai", role: "Corporator", img: "/lightmode-logo cl.png" }
+  ];
 
   return (
     <>
@@ -39,12 +86,12 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Cinematic Floating Dashboard Visual */}
-            <div className="hero-glass-card">
+            {/* Simple Static PNG Image Container (No Animation or Tilt) */}
+            <div className="hero-static-card">
               <img 
-                src="/hero.jpeg" 
-                alt="Digital Campaign Strategy Dashboard" 
-                style={{ width: '100%', height: 'auto', display: 'block' }} 
+                src="/hero.png" 
+                alt="Political Campaign Image" 
+                style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} 
               />
             </div>
           </div>
@@ -169,6 +216,30 @@ export default function Home() {
             </ul>
           </div>
         </section>
+
+        {/* --- NEW: INFINITE CLIENT MARQUEE --- */}
+        <section className="client-marquee-sec">
+          <div className="wrap">
+            <h2 className="marquee-title">Trusted by 20+ Political Leaders</h2>
+          </div>
+          <div className="marquee-container">
+            <div className="marquee-track">
+              {/* Render the list twice to create a seamless infinite scroll loop */}
+              {[...leadersList, ...leadersList].map((client, idx) => (
+                <div className="client-badge" key={idx}>
+                  <img src={client.img} alt={client.name} loading="lazy" />
+                  <div>
+                    <h4>{client.name}</h4>
+                    <p>{client.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* --- CLIENT TESTIMONIALS PHOTO CAROUSEL --- */}
+        <ClientTestimonials testimonials={clientReviews} />
 
         {/* --- FAQ SECTION --- */}
         <FaqAccordion faqs={FAQ} />

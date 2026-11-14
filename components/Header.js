@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { ChevronDown, Menu, X, PhoneCall, ArrowRight, Megaphone, MonitorSmartphone, PenTool, CheckCircle2 } from "lucide-react";
+import { ChevronDown, Menu, X, PhoneCall, ArrowRight, Megaphone, MonitorSmartphone, PenTool, CheckCircle2, ExternalLink } from "lucide-react";
 import { CONTACT, NAV, SERVICES } from '../app/data';
 
 export default function Header({ onContactClick }) {
@@ -32,7 +32,7 @@ export default function Header({ onContactClick }) {
           </div>
         </a>
 
-        {/* DESKTOP NAV (Visible on screens >= 480px) */}
+        {/* DESKTOP NAV */}
         <nav className="desktop-nav">
           <div className="mega-trigger">
             <a href="#services" className="nav-link">
@@ -96,14 +96,35 @@ export default function Header({ onContactClick }) {
           ))}
         </nav>
 
-        <button onClick={onContactClick} className="main-btn">Get in touch</button>
+        {/* HEADER ACTIONS: Get in touch FIRST, then animated Clearby Services */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <button onClick={onContactClick} className="main-btn">Get in touch</button>
+
+          <a 
+            href="https://clearbyservices.com/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="main-btn animated-services-btn"
+            style={{ 
+              background: 'transparent', 
+              color: 'var(--navy)', 
+              border: '2px solid var(--navy)',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              textDecoration: 'none'
+            }}
+          >
+            Clearby Services <ExternalLink size={14} />
+          </a>
+        </div>
 
         <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="mobile-toggle" aria-label="Toggle Menu">
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* MOBILE MENU (Displays when hamburger is toggled below 480px) */}
+      {/* MOBILE MENU */}
       {mobileMenuOpen && (
         <div className="mobile-drawer">
           <button onClick={() => setOpenSection(openSection === "services" ? null : "services")} className="mob-btn">
@@ -134,12 +155,21 @@ export default function Header({ onContactClick }) {
           ))}
 
           <div className="mob-actions">
+            <button onClick={() => { setMobileMenuOpen(false); onContactClick(); }} className="cta-btn" style={{ background: 'var(--orange)', color: 'var(--navy)' }}>
+              Get in touch <ArrowRight size={16} />
+            </button>
+            <a 
+              href="https://clearbyservices.com/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="cta-btn animated-services-btn" 
+              style={{ background: 'transparent', color: 'var(--navy)', border: '2px solid var(--navy)' }}
+            >
+              Clearby Services <ExternalLink size={16} />
+            </a>
             <a href={`tel:${CONTACT.phone.replace(/\s/g, '')}`} className="cta-btn" style={{ background: 'var(--beige-2)', color: 'var(--navy)', border: '1px solid #1e223d22' }}>
               <PhoneCall size={16} color="var(--orange)" /> Call: {CONTACT.phone}
             </a>
-            <button onClick={() => { setMobileMenuOpen(false); onContactClick(); }} className="cta-btn" style={{ background: 'var(--orange)', color: 'var(--navy)' }}>
-              Start a Conversation <ArrowRight size={16} />
-            </button>
           </div>
         </div>
       )}

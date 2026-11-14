@@ -1,7 +1,7 @@
 export const CONTACT = {
   email: 'hello@yourdomain.com',
-  phone: '+91 00000 00000',
-  location: 'Pune, Maharashtra, India',
+  phone: '+91 7020112146',
+  location: 'VJ Indilife Sus-Pashan Road,Vardayani Society, Sutarwadi,Pashan Pune, Maharashtra 411021, India',
   formEndpoint: '' // Add your form endpoint here if using one
 };
 
