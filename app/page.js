@@ -183,6 +183,28 @@ export default function Home() {
           </div>
         </section>
 
+{/* --- CONTINUOUS INFINITE LOGO MARQUEE (A–X) --- */}
+        <section className="client-marquee-sec" aria-label="Political Symbols and Logos">
+          <div className="marquee-container">
+            <div className="marquee-track">
+              <div className="marquee-group">
+                {partyLogos.map((logo, idx) => (
+                  <div className="client-badge" key={`set1-${idx}`}>
+                    <img src={logo.img} alt={logo.name} loading="eager" />
+                  </div>
+                ))}
+              </div>
+              <div className="marquee-group" aria-hidden="true">
+                {partyLogos.map((logo, idx) => (
+                  <div className="client-badge" key={`set2-${idx}`}>
+                    <img src={logo.img} alt="" loading="eager" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* --- ABOUT SECTION --- */}
         <section id="about" className="about-modern">
           <div className="wrap">
@@ -231,7 +253,12 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        
+        {/* --- CLIENT TESTIMONIALS PHOTO CAROUSEL --- */}
+        <div id="clients">
+          <ClientTestimonials testimonials={clientReviews} />
+        </div>
+        
         {/* --- CAMPAIGNS SECTION --- */}
         <section id="campaigns" className="campaigns-modern">
           <div className="wrap">
@@ -324,11 +351,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* --- CLIENT TESTIMONIALS PHOTO CAROUSEL --- */}
-        <div id="clients">
-          <ClientTestimonials testimonials={clientReviews} />
-        </div>
 
         {/* --- FAQ SECTION --- */}
         <FaqAccordion faqs={FAQ} />
