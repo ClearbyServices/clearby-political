@@ -11,62 +11,136 @@ import { ClientTestimonials } from '../components/ClientTestimonials';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
-  
+
   const showModal = () => setOpen(true);
   const hideModal = () => setOpen(false);
 
-  const clientReviews = [
+const clientReviews = [
     {
-      quote: "Clearby Political streamlined our entire digital presence, ensuring consistent branding across our website and social media channels.",
-      name: "Adv. Rajesh Patil",
-      role: "Candidate, State Legislative Assembly",
-      src: "/lightmode-logo cl.png",
+      name: "Ashwini Jagtap",
+      role: "Ex-Member of the Legislative Assembly",
+      src: "/1.png",
     },
     {
-      quote: "The team managed our daily content schedules and promotional materials seamlessly throughout the campaign window.",
-      name: "Suresh Deshmukh",
-      role: "Campaign Coordinator",
-      src: "/lightmode-logo cl.png",
+      name: "Manikrao Kokate",
+      role: "Ex-Cabinet Minister, Sinnar Member of the Legislative Assembly",
+      src: "/2.png",
     },
     {
-      quote: "From candidate branding to targeted digital advertising, their integrated approach gave us a massive edge on ground communication.",
-      name: "Vikram Jadhav",
-      role: "Party Unit President",
-      src: "/lightmode-logo cl.png",
+      name: "Madhuri Misal",
+      role: "Minister Of State Maharashtra",
+      src: "/3.png",
+    },
+    {
+      name: "Rajabhau Waje",
+      role: "Member Of Parliament, Nashik",
+      src: "/4.png",
+    },
+    {
+      name: "Ravindra Waikar",
+      role: "Member of Parliament (MP), Mumbai North-West",
+      src: "/5.png",
+    },
+    {
+      name: "Vijay Bappu Shivtare",
+      role: "Member of the Legislative Assembly",
+      src: "/6.png",
+    },
+    {
+      name: "Mahesh Landge",
+      role: "Member of the Legislative Assembly",
+      src: "/7.png",
+    },
+    {
+      name: "Anil Desai",
+      role: "Member of Parliament, south middle Mumbai",
+      src: "/8.png",
+    },
+    {
+      name: "Ashok Pawar",
+      role: "Ex-Member of the Legislative Assembly",
+      src: "/9.png",
+    },
+    {
+      name: "Ujjwal Nikam",
+      role: "Rajya Sabha, Member of Parliament",
+      src: "/10.png",
+    },
+    {
+      name: "Vikrant Patil",
+      role: "Member of the Legislative Council",
+      src: "/11.png",
+    },
+    {
+      name: "Ravindra Dhangekar",
+      role: "Ex-Member of the Legislative Assembly",
+      src: "/12.png",
+    },
+    {
+      name: "Shashikant Shinde",
+      role: "Member of the Legislative Council",
+      src: "/13.png",
+    },
+    {
+      name: "Amit Gorkhe",
+      role: "Member of the Legislative Council",
+      src: "/14.png",
+    },
+    {
+      name: "Yogesh Tilekar",
+      role: "Member of the Legislative Council",
+      src: "/15.png",
+    },
+    {
+      name: "Anup More",
+      role: "BJYM Secretary Maharashtra",
+      src: "/16.png",
+    },
+    {
+      name: "Bappu Bhegade",
+      role: "",
+      src: "/17.png",
+    },
+    {
+      name: "Amol Jawale",
+      role: "Member of the Legislative Assembly",
+      src: "/18.png",
+    },
+    {
+      name: "Vishal Patil",
+      role: "Member Of Parliament, Sangli",
+      src: "/19.png",
+    },
+    {
+      name: "Suhas Babar",
+      role: "",
+      src: "/20.png",
+    },
+    {
+      name: "Shruti Wakadkar",
+      role: "Corporator, PCMC",
+      src: "/21.png",
+    },
+    {
+      name: "Nivedita Ekbote",
+      role: "Corporator, PMC",
+      src: "/22.png",
     },
   ];
 
-  // NEW: 20+ Political Client Roster for Animated Marquee
-  const leadersList = [
-    { name: "Rahul Deshmukh", role: "Member of Legislative Assembly", img: "/lightmode-logo cl.png" },
-    { name: "Priya Sharma", role: "Zila Parishad Member", img: "/lightmode-logo cl.png" },
-    { name: "Vikram Jadhav", role: "Party Unit President", img: "/lightmode-logo cl.png" },
-    { name: "Sanjay Patil", role: "Member of Parliament", img: "/lightmode-logo cl.png" },
-    { name: "Anita Chavan", role: "Mayor", img: "/lightmode-logo cl.png" },
-    { name: "Ramesh Pawar", role: "Corporator", img: "/lightmode-logo cl.png" },
-    { name: "Suresh Deshmukh", role: "Campaign Coordinator", img: "/lightmode-logo cl.png" },
-    { name: "Adv. Rajesh Patil", role: "Candidate, State Assembly", img: "/lightmode-logo cl.png" },
-    { name: "Kiran Gokhale", role: "District President", img: "/lightmode-logo cl.png" },
-    { name: "Nitin Kadam", role: "City Vice President", img: "/lightmode-logo cl.png" },
-    { name: "Meena Thorat", role: "Panchayat Samiti Member", img: "/lightmode-logo cl.png" },
-    { name: "Vijay Shinde", role: "Youth Wing Leader", img: "/lightmode-logo cl.png" },
-    { name: "Sunil Munde", role: "Former MLA", img: "/lightmode-logo cl.png" },
-    { name: "Deepak Joshi", role: "State Secretary", img: "/lightmode-logo cl.png" },
-    { name: "Arun Kulkarni", role: "Spokesperson", img: "/lightmode-logo cl.png" },
-    { name: "Pooja Wagh", role: "Women's Wing President", img: "/lightmode-logo cl.png" },
-    { name: "Mahesh Bhosale", role: "Taluka President", img: "/lightmode-logo cl.png" },
-    { name: "Ganesh Kale", role: "Sarpanch", img: "/lightmode-logo cl.png" },
-    { name: "Santosh Mane", role: "Candidate, Lok Sabha", img: "/lightmode-logo cl.png" },
-    { name: "Amol Jadhav", role: "General Secretary", img: "/lightmode-logo cl.png" },
-    { name: "Sneha Desai", role: "Corporator", img: "/lightmode-logo cl.png" }
-  ];
+  // Logos A–X from public/logos/
+  const logoLetters = "ABCDEFGHIJKLMNOPQRSTUVWX".split("");
+  const partyLogos = logoLetters.map((letter) => ({
+    name: `Symbol ${letter}`,
+    img: `/logos/${letter}.png`,
+  }));
 
   return (
     <>
       <Header onContactClick={showModal} />
 
       <main id="top">
-        
+
         {/* --- HERO SECTION --- */}
         <section className="hero-modern">
           <div className="wrap hero-grid">
@@ -86,12 +160,12 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Simple Static PNG Image Container (No Animation or Tilt) */}
+            {/* Simple Static PNG Image Container */}
             <div className="hero-static-card">
-              <img 
-                src="/hero.png" 
-                alt="Political Campaign Image" 
-                style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} 
+              <img
+                src="/hero.png"
+                alt="Political Campaign Image"
+                style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }}
               />
             </div>
           </div>
@@ -217,23 +291,24 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- NEW: INFINITE CLIENT MARQUEE --- */}
-        <section className="client-marquee-sec">
-          <div className="wrap">
-            <h2 className="marquee-title">Trusted by 20+ Political Leaders</h2>
-          </div>
+        {/* --- CONTINUOUS INFINITE LOGO MARQUEE (A–X) --- */}
+        <section className="client-marquee-sec" aria-label="Political Symbols and Logos">
           <div className="marquee-container">
             <div className="marquee-track">
-              {/* Render the list twice to create a seamless infinite scroll loop */}
-              {[...leadersList, ...leadersList].map((client, idx) => (
-                <div className="client-badge" key={idx}>
-                  <img src={client.img} alt={client.name} loading="lazy" />
-                  <div>
-                    <h4>{client.name}</h4>
-                    <p>{client.role}</p>
+              <div className="marquee-group">
+                {partyLogos.map((logo, idx) => (
+                  <div className="client-badge" key={`set1-${idx}`}>
+                    <img src={logo.img} alt={logo.name} loading="eager" />
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="marquee-group" aria-hidden="true">
+                {partyLogos.map((logo, idx) => (
+                  <div className="client-badge" key={`set2-${idx}`}>
+                    <img src={logo.img} alt="" loading="eager" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
