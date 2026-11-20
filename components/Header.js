@@ -15,6 +15,14 @@ export default function Header({ onContactClick }) {
   const categories = Object.keys(categorizedServices);
   const [activeCategory, setActiveCategory] = useState(categories[0]);
 
+  const navItems = [
+    ...NAV.filter(([label]) => !['Services', 'Campaigns', 'Process'].includes(label)),
+  ];
+
+  // Insert 'Clients' right after 'About' (or at the start if 'About' isn't found)
+  const aboutIndex = navItems.findIndex(([label]) => label === 'About');
+  navItems.splice(aboutIndex !== -1 ? aboutIndex + 1 : 0, 0, ['Clients', '#clients']);
+
   const getCategoryIcon = (category) => {
     if (category.includes("Strategy")) return <MonitorSmartphone size={16} />;
     return <PenTool size={16} />;
@@ -91,7 +99,7 @@ export default function Header({ onContactClick }) {
             </div>
           </div>
 
-          {NAV.filter(([l]) => l !== 'Services').map(([label, href]) => (
+          {navItems.map(([label, href]) => (
             <a key={href} href={href} className="nav-link">{label}</a>
           ))}
         </nav>
@@ -150,7 +158,7 @@ export default function Header({ onContactClick }) {
             </div>
           )}
 
-          {NAV.filter(([l]) => l !== 'Services').map(([label, href]) => (
+          {navItems.map(([label, href]) => (
             <a key={href} href={href} onClick={() => setMobileMenuOpen(false)} className="mob-link">{label}</a>
           ))}
 

@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ArrowRight, Check } from "lucide-react";
 import { SERVICES, CAMPAIGNS, STEPS, WHY, PRINCIPLES, FAQ } from '../app/data';
 import Header from '../components/Header';
@@ -12,10 +12,22 @@ import { ClientTestimonials } from '../components/ClientTestimonials';
 export default function Home() {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if ('scrollRestoration' in window.history) {
+        window.history.scrollRestoration = 'manual';
+      }
+      if (window.location.hash) {
+        window.history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   const showModal = () => setOpen(true);
   const hideModal = () => setOpen(false);
 
-const clientReviews = [
+  const clientReviews = [
     {
       name: "Ashwini Jagtap",
       role: "Ex-Member of the Legislative Assembly",
@@ -119,12 +131,12 @@ const clientReviews = [
     {
       name: "Shruti Wakadkar",
       role: "Corporator, PCMC",
-      src: "/21.png",
+      src: "/25.png",
     },
     {
       name: "Nivedita Ekbote",
       role: "Corporator, PMC",
-      src: "/22.png",
+      src: "/26.png",
     },
   ];
 
@@ -314,7 +326,9 @@ const clientReviews = [
         </section>
 
         {/* --- CLIENT TESTIMONIALS PHOTO CAROUSEL --- */}
-        <ClientTestimonials testimonials={clientReviews} />
+        <div id="clients">
+          <ClientTestimonials testimonials={clientReviews} />
+        </div>
 
         {/* --- FAQ SECTION --- */}
         <FaqAccordion faqs={FAQ} />
